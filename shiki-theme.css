@@ -1,8 +1,6 @@
-/* by Jogeer [t.me/Jogeer] v4.1 */ html {overflow-x: hidden; overflow-y: scroll; font-size: 100%;}
+/* by Jogeer [t.me/Jogeer] v4.2 */ html {overflow-x: hidden; overflow-y: scroll; font-size: 100%;}
 
-:root {
-  /* Смена всех цветов */
-  
+:root {  /* Смена всех цветов */
   	/* Pallete */
   	--main_color: #a1d2ea; /* Основной цвет страницы */
     --additional_color: #62b4dc; /* Дополнительный цвет страницы */
@@ -10,54 +8,52 @@
   	--support_color: #ffdd50; /* Второй цвет - дополнительный */
   
     /* diff */
-    --header_menu_bg: #24242d; /* Цвет выпадающего списка в меню */
+    --header_menu_bg: #111315; /* Цвет выпадающего списка в меню | #24242d */
   	--bg_main_color: #18181b; /* Основной цвет(или налож. карт.) страницы */
-  	--yet_undif_color1: #19191f; /* Цвет шапки #131719 */
+  	--yet_undif_color1: #111315; /* Цвет шапки | #19191f */
     --sub_color_hover-and-etc: #242429; /*#1c1d1d9e*/; /* Цвет при навидении и тд */
   	--header-in_hover_color: #6d6d6d25; /* Ховер на внутреннюю меню раздела хереда */
-
-  /* Не для изаенения */
-  	--bg_support_color: var(--bg_main_color); /* Дополнительный цвет заднего фона */
-  	--main_text_color: #eee; /* Основной цвет текста */
-  	--no_color: #00000000;
   
   /* Изменение изображений на сайте */
-    --bg_main_img: url(https://cdn.discordapp.com/attachments/637623376633921556/698893245161144370/IDIITUL5uBI.jpg); /* Основное изображение (Фон) */
-      /*
-       https://cdn.discordapp.com/attachments/415907931138031616/578185854082744320/sensan.png - Альтернатива
-      */
-  	--bg3: #292929; /* Задник 3 (При непрогрузе) */
-    --bg_main_up_value: 0px; /* Поднимает или опускает фоновое изображение на число пикселей (Положительное число - вниз, отриц. - вверх) */
+    --bg_main_img: url(https://cdn.discordapp.com/attachments/403569182488395776/849691000803950642/bga.png); /* Основное изображение (Фон) */
+      /* Альтернативы:
+  		 https://cdn.discordapp.com/attachments/637623376633921556/698893245161144370/IDIITUL5uBI.jpg / #292929
+		 https://cdn.discordapp.com/attachments/415907931138031616/578185854082744320/sensan.png / #fdd551
+  	  */
+  	--bg3: #16161b; /* Задник (При непрогрузе) */
+    --bg_main_up_value: -280px; /* Поднимает или опускает фоновое изображение на число пикселей (Положительное число - вниз, отриц. - вверх) */
     --fixed: fixed; /* Фиксировать ли изображение заднего фона? (fixed - фиксировать | unset - не фиксировать) */
+  	--repeat: repeat-y; /* Повторять? Только профиль */
   
       /* Другие изображения */
   	--progress_gif: url(https://cdn.discordapp.com/attachments/544095610266058762/551468868284186634/826.png); /* Колесо загрузки */
 
   /* Аттрибуты для тонкой настройки */
-    --anime_checked: #9AE869; /* Рядом с галочками */
-  	--input_text-comment: #242429; /* --- */
-    --yet_color_abm: #87CEFA; /* Обо мне и похожие пользователя */
-    --border_l-page: 15px; /* Границы у лп */
+    --anime_checked: #9AE869; /* Круг галочек */
+    --border_l-page: 15px; /* Радиус закругления страницы */
     --header_main_color: #e86666; /* Дефолтный цвет в шапке */
     --header_additional_color: #5271d0; /* Ховер колор шапка */
   	--scrollbar-width: 0px; /* Ширина скроллбара */
-  	--grad_c1: var(--yet_undif_color1);
-  	--grad_c2: #bbc6a4;/* Градиент полоски на выдвижных списках */
-  	--grad_c3: var(--yet_undif_color1);
 	--pg_bar: #715ddc; /* Цвет прогрессбара */
 	--scrollbar_height: 46px; /* Параметр отступа L-PAGE от края страницы, высота хэдера, кнопки скроллбара */
     --profile_downgrade: 23%; /* Отступ страницы в профиле */
-    --on-off_header-in-hover-border: 0px; /* 1px - on | 0 - off */
+    --on-off_header-in-hover-border: 0px; /* Обводка в пунктах шапки / 1px - on | 0 - off */
   	--x2-margin_l-page: 20%; /* Отступы по бокам */
-    --pogreshnost: 1.25px; /* Погрешность бг */
+    --error: 1.25px; /* Погрешность бг */
 
+  /* Не для изаенения */
+  	--bg_support_color: var(--bg_main_color); /* Дополнительный цвет заднего фона */
+  	--main_text_color: #eee;
+  	--no_color: #00000000;
+  
   /* Шрифты */
   	--icons: 'Material Icons Round';
-  	--logo: 'Montserrat'; /* х */
+  	--logo: 'Montserrat';
 }
 
 /* Бэкграунды */
-body {background: var(--bg_main_img) no-repeat, var(--bg3) repeat left top !important; background-size: calc(100% + 1.7 * var(--scrollbar-width)), auto, auto !important; background-position: center var(--bg_main_up_value) !important; max-width: 100vw !important; background-attachment: var(--fixed) !important;}
+body[id="profiles_show"].p-profiles {background-repeat: var(--repeat); background-position: center var(--bg_main_up_value);}
+body {background: var(--bg_main_img) no-repeat, var(--bg3) repeat left top; background-size: calc(100% + 1.7 * var(--scrollbar-width)), auto, auto; background-position: center; max-width: 100vw !important; background-attachment: var(--fixed) !important;}
 @media (max-width: 1024px) {body {background: var(--bg_main_img) no-repeat, var(--bg3) repeat left top !important; background-size: 100% !important; background-position: center var(--bg_main_up_value) !important; background-attachment: var(--fixed) !important; overflow-x: hidden;}}
 
 /* Скроллбар */
@@ -66,7 +62,7 @@ body::-webkit-scrollbar-button {width: var(--scrollbar-width); height: var(--scr
 body::-webkit-scrollbar-button:increment {display: none;}
 body::-webkit-scrollbar-thumb {background: #0000004c !important; transition: 5s;}
 body::-webkit-scrollbar-thumb:hover {background: #0000007c !important;}
-body::-webkit-scrollbar-track {z-index:10;background: right top calc(var(--scrollbar_height) * -1 + var(--bg_main_up_value) + var(--pogreshnost)) / 100vw auto no-repeat;background-image: inherit;}
+body::-webkit-scrollbar-track {z-index:10;background: right top calc(var(--scrollbar_height) * -1 + var(--bg_main_up_value) + var(--error)) / 100vw auto no-repeat;background-image: inherit;}
 div.cc-favourites::-webkit-scrollbar {display: none !important;}
 
 /* Прогрессбар */
@@ -93,6 +89,31 @@ div.cc-favourites::-webkit-scrollbar {display: none !important;}
 @font-face {font-family: 'Material Icons Round';font-style: normal;font-weight: 400;src: url(https://fonts.gstatic.com/s/materialiconsround/v26/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format('woff2');}
 
 #l, body .buttons > div > .b-tooltipped:before {font-family: 'Material Icons';font-weight: normal;font-style: normal;font-size: 24px;line-height: 1;letter-spacing: normal;text-transform: none;display: inline-block;white-space: nowrap;word-wrap: normal;direction: ltr;-webkit-font-feature-settings: 'liga';-webkit-font-smoothing: antialiased;}
+
+/* Тест  /
+.l-page {
+	background-color: var(--bg_support_color);
+}
+header.head .notice, .b-tag, .b-entry-info .line .key, .l-page, .bar.horizontal .line .x_label, .b-rate .score-notice, .b-rate div {
+  	color: var(--main_text_color);
+}
+header.head h1, header.head h2, .headline>a, .midheadline>a, .subheadline>a, .b-animes-menu .total-rates, .b-db_entry>.c-about .additional-links .key, .b-subposter-action:hover, .b-link:hover {
+	color: var(--main_color) !important;
+}
+.headline>a:hover, .midheadline>a:hover, .subheadline>a:hover, .b-entry-info .line .value, .b-db_entry>.c-about .additional-links .line-container>.link, .b-db_entry>.c-about .additional-links .line-container>a, .b-db_entry>.c-about .additional-links .line-container>.link:hover, .b-db_entry>.c-about .additional-links .line-container>a:hover {
+	color: var(--additional_color);
+}
+
+body .b-subposter-actions, .b-subposter-action {
+	justify-content: space-evenly;
+  	color: #c1c1c1 !important;
+}
+.midheadline, .subheadline {
+	background: var(--header-in_hover_color);
+    border-left: 5px solid;
+    color: var(--support_color);
+}
+*/
 
 /* DISPLAY: NONE */
 body[id="achievements_franchise"] .b-breadcrumbs, .p-profiles .to-top-fix, .page-wrap, .l-footer:after, .c-generated_news center.block, .page-wrap, #main, .l-page:before, .l-page:after, .l-footer:before, .l-footer:after, .tipsy-s .tipsy-arrow {
@@ -448,36 +469,6 @@ div.search.mobile-search-toggler.active {
 .marker-positioner, .hover-activator {
 	margin-top: -110px;
 }
-/*.menu .unread-count, .menu .contest {
-	background: var(--header_main_color);
-	font-family: var(--logo);
-	border-radius: 12px;
-	color: var(--main_text_color);
-	width: 20px;
-	padding: 0px 2px;
-	transition: .2s;
-	position: absolute;
-	top: 6px;
-	right: 0;
-}
-.menu .contest {
-	width: 20px;
-	position:inherit;
-}
-.menu .entry:hover .unread-count {
-	background: #6b6db1;
-	color: var(--main_text_color);
-}
-.menu .entry:hover .contest {
-	background: var(--header_main_color);
-	color: var(--main_text_color);
-}
-.menu .unread-count:hover {
-	background: #6b6db1 !important;
-}
-.menu .contest:hover {
-	background: var(--header_main_color) !important;
-}*/
 header.head .misc {
 	font-size: 12px;
 }
@@ -694,7 +685,7 @@ body[id="achievements_index"] .cc-achievements .b-achievement {
 	margin-bottom:0px;
 }
 body[id="achievements_index"] .cc-achievements .b-achievement:hover {
-	box-shadow: #080d0e 0px 1px 10px 2px;
+	box-shadow: #272727 0px 1px 10px 2px;
 }
 body[id="achievements_index"] .b-achievement .c-image {
 	width: 100%;
@@ -1052,7 +1043,7 @@ body[id="user_rates_index"] .b-form .cancel {
 	color: var(--additional_color);
 }
 body.p-profiles .b-shiki_editor .body .editor textarea {
-	background: var(--input_text-comment);
+	background: #242429;
 }
 .p-profiles .b-form input[type=submit]:hover, .p-profiles .b-form input[type=submit]:active, .b-shiki_editor footer .preview:hover, .b-shiki_editor footer .preview:active, .b-form input[type=submit][disabled], .b-form input[type=submit].disabled, .b-form input[type=submit]:hover, .b-shiki_editor .links .b-button.ok:hover, .b-shiki_editor .images .b-button.ok:hover, .b-shiki_editor .quotes .b-button.ok:hover, .b-shiki_editor .email .b-button.ok:hover, .b-shiki_editor .upload .b-button.ok:hover, .b-form .cancel:hover {
 	background-color:#d64848 !important;
@@ -1929,7 +1920,7 @@ body[id="user_rates_index"] .b-catalog_entry .cover .misc span {
 	font-size: 12px;
 }
 .p-user_rates-index .list-lines tr td .rewatches {
-	color:var(--yet_color_abm);
+	color: #87CEFA;
 }
 .p-user_rates-index .list-posters .user_rate .edit-user_rate {
 	border: 1px solid transparent;
