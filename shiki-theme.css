@@ -1,54 +1,54 @@
 /* by Jogeer [t.me/Jogeer] v4.2 */ html {overflow-x: hidden; overflow-y: scroll; font-size: 100%;}
 
 :root {  /* Смена всех цветов */
-  	/* Pallete */
-  	--main_color: #a1d2ea; /* Основной цвет страницы */
+  /* Pallete */
+    --main_color: #a1d2ea; /* Основной цвет страницы */
     --additional_color: #62b4dc; /* Дополнительный цвет страницы */
     --support_yet_color: #ffe888; /* Второй цвет - основной */
-  	--support_color: #ffdd50; /* Второй цвет - дополнительный */
+    --support_color: #ffdd50; /* Второй цвет - дополнительный */
   
     /* diff */
     --header_menu_bg: #111315; /* Цвет выпадающего списка в меню | #24242d */
-  	--bg_main_color: #18181b; /* Основной цвет(или налож. карт.) страницы */
-  	--yet_undif_color1: #111315; /* Цвет шапки | #19191f */
+    --bg_main_color: #18181b; /* Основной цвет(или налож. карт.) страницы */
+    --yet_undif_color1: #111315; /* Цвет шапки | #19191f */
     --sub_color_hover-and-etc: #242429; /*#1c1d1d9e*/; /* Цвет при навидении и тд */
-  	--header-in_hover_color: #6d6d6d25; /* Ховер на внутреннюю меню раздела хереда */
+    --header-in_hover_color: #6d6d6d25; /* Ховер на внутреннюю меню раздела хереда */
   
   /* Изменение изображений на сайте */
     --bg_main_img: url(https://cdn.discordapp.com/attachments/403569182488395776/849691000803950642/bga.png); /* Основное изображение (Фон) */
       /* Альтернативы:
   		 https://cdn.discordapp.com/attachments/637623376633921556/698893245161144370/IDIITUL5uBI.jpg / #292929
 		 https://cdn.discordapp.com/attachments/415907931138031616/578185854082744320/sensan.png / #fdd551
-  	  */
-  	--bg3: #16161b; /* Задник (При непрогрузе) */
+      */
+    --bg3: #16161b; /* Задник (При непрогрузе) */
     --bg_main_up_value: -280px; /* Поднимает или опускает фоновое изображение на число пикселей (Положительное число - вниз, отриц. - вверх) */
     --fixed: fixed; /* Фиксировать ли изображение заднего фона? (fixed - фиксировать | unset - не фиксировать) */
-  	--repeat: repeat-y; /* Повторять? Только профиль */
+    --repeat: repeat-y; /* Повторять? Только профиль */
   
       /* Другие изображения */
-  	--progress_gif: url(https://cdn.discordapp.com/attachments/544095610266058762/551468868284186634/826.png); /* Колесо загрузки */
+    --progress_gif: url(https://cdn.discordapp.com/attachments/544095610266058762/551468868284186634/826.png); /* Колесо загрузки */
 
   /* Аттрибуты для тонкой настройки */
     --anime_checked: #9AE869; /* Круг галочек */
     --border_l-page: 15px; /* Радиус закругления страницы */
     --header_main_color: #e86666; /* Дефолтный цвет в шапке */
     --header_additional_color: #5271d0; /* Ховер колор шапка */
-  	--scrollbar-width: 0px; /* Ширина скроллбара */
-	--pg_bar: #715ddc; /* Цвет прогрессбара */
-	--scrollbar_height: 46px; /* Параметр отступа L-PAGE от края страницы, высота хэдера, кнопки скроллбара */
+    --scrollbar-width: 0px; /* Ширина скроллбара */
+    --pg_bar: #715ddc; /* Цвет прогрессбара */
+    --scrollbar_height: 46px; /* Параметр отступа L-PAGE от края страницы, высота хэдера, кнопки скроллбара */
     --profile_downgrade: 23%; /* Отступ страницы в профиле */
     --on-off_header-in-hover-border: 0px; /* Обводка в пунктах шапки / 1px - on | 0 - off */
-  	--x2-margin_l-page: 20%; /* Отступы по бокам */
+    --x2-margin_l-page: 20%; /* Отступы по бокам */
     --error: 1.25px; /* Погрешность бг */
 
   /* Не для изаенения */
-  	--bg_support_color: var(--bg_main_color); /* Дополнительный цвет заднего фона */
-  	--main_text_color: #eee;
-  	--no_color: #00000000;
+    --bg_support_color: var(--bg_main_color); /* Дополнительный цвет заднего фона */
+    --main_text_color: #eee;
+    --no_color: #00000000;
   
   /* Шрифты */
-  	--icons: 'Material Icons Round';
-  	--logo: 'Montserrat';
+    --icons: 'Material Icons Round';
+    --logo: 'Montserrat';
 }
 
 /* Бэкграунды */
