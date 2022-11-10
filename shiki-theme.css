@@ -1,4 +1,4 @@
-/* by Jogeer [t.me/Jogeer] v4.4 */ html {overflow-x: hidden; overflow-y: scroll; font-size: 100%;}
+/* by Jogeer [t.me/Jogeer] v4.4.1 */ html {overflow-x: hidden; overflow-y: scroll; font-size: 100%;}
 
 :root {  /* Смена всех цветов */
   /* Pallete */
@@ -15,15 +15,16 @@
     --header-in_hover_color: #6d6d6d25; /* Ховер на внутреннюю меню раздела хереда */
   
   /* Изменение изображений на сайте */
-    --bg_main_img: url(https://cdn.discordapp.com/attachments/403569182488395776/849691000803950642/bga.png); /* Основное изображение (Фон) */
+    --bg_main_img: url(https://cdn.discordapp.com/attachments/470178806192406528/896790652887654431/SPOILER_121415.jpg); /* Основное изображение (Фон) */
       /* Альтернативы:
-  		 https://cdn.discordapp.com/attachments/637623376633921556/698893245161144370/IDIITUL5uBI.jpg / #292929
-		 https://cdn.discordapp.com/attachments/415907931138031616/578185854082744320/sensan.png / #fdd551
+  		https://cdn.discordapp.com/attachments/403569182488395776/849691000803950642/bga.png
+  		https://cdn.discordapp.com/attachments/637623376633921556/698893245161144370/IDIITUL5uBI.jpg / #292929
+		https://cdn.discordapp.com/attachments/415907931138031616/578185854082744320/sensan.png / #fdd551
       */
-    --bg3: #16161b; /* Задник (При непрогрузе) */
-    --bg_main_up_value: -280px; /* Поднимает или опускает фоновое изображение на число пикселей (Положительное число - вниз, отриц. - вверх) */
+    --bg3: #041212; /* Задник (При непрогрузе) */
+    --bg_main_up_value: 0; /* Поднимает или опускает фоновое изображение на число пикселей (Положительное число - вниз, отриц. - вверх) */
     --fixed: fixed; /* Фиксировать ли изображение заднего фона? (fixed - фиксировать | unset - не фиксировать) */
-    --repeat: repeat-y; /* Повторять? Только профиль */
+    --repeat: no-repeat; /* Повторять? Только профиль */
   
       /* Другие изображения */
     --progress_gif: url(https://cdn.discordapp.com/attachments/544095610266058762/551468868284186634/826.png); /* Колесо загрузки */
@@ -149,7 +150,7 @@ body.p-profiles.p-profiles-show .l-page {
 	font-family: var(--icons);
 	content:'message';
 }
-.profile-actions .mail, .profile-actions .settings, .profile-actions .ban, .profile-actions .ignore-add, .profile-actions .talk {
+.profile-actions .mail, .profile-actions .settings, .profile-actions .ban, .profile-actions .ignore-add, .profile-actions .talk, .profile-actions .fav-remove {
 	margin-left:15px;
 }
 .l-top_menu-v2 .menu-icon.forum:before {
@@ -957,11 +958,11 @@ body .b-comment>.inner .was_updated {
 body .b-comment div.body[itemprop="commentText"] {
 	margin: 0 auto 0 60px;
 }
-/*body .b-comment .inner > .buttons {
+body .b-comment .inner > .buttons {
 	position: absolute;
     top: 0;
     right: 0;
-}*/
+}
 body .buttons > div > span, body .buttons > div > label {
 	color: var(--header_main_color) !important;
 	font-size:24px;
@@ -1489,6 +1490,7 @@ body[id="user_history_index"] .block > .subheadline {
 }
 .p-profiles-show .achievements .header .title {
 	font-weight: initial;
+  	color: var(--main_color);
 }
 .b-stats_bar .stat_names a {
 	font-size: 13px;
@@ -1680,9 +1682,8 @@ body[id="user_history_index"] .block > .subheadline {
 	color: var(--support_color);
 }
 /* Контейнер для "Время за аниме и мангой" и "Активность на сайте" */
-.p-profiles-show .profile-content .cc-2 > .c-column:first-child {
+.p-profiles-show .profile-content .cc-2.block > .c-column:first-child {
 	width: 72.63%;
-	margin-right:0 !important;
 }
 .p-profiles-show .profile-content .cc-2 > .c-column:first-child > .lifetime .title .value {
 	color: var(--main_color);
@@ -2039,7 +2040,7 @@ body[id="user_rates_index"] .m10 {
 .b-list_switchers {
 	height: 30px;
 }
-.b-list_switchers .switcher.lines, .b-list_switchers .switcher.posters {
+.b-list_switchers .switcher.lines, .b-list_switchers .switcher.posters, .b-list_switchers .switcher.list.selected {
 	display: inline-block;
 	font-size: 22px;
 	height: 30px !important;
@@ -2304,9 +2305,6 @@ body[id="user_rates_index"] .m10 {
 	}
 }
 @media screen and (max-width: 767px) {
-	.b-options-floated.mobile-phone{
-		margin-bottom: -32px;
-	}
 	.b-options-floated.mobile-phone.before-buttons-3{
 		margin-bottom: 0px;
 	}
@@ -2397,7 +2395,7 @@ body[id="user_rates_index"] .m10 {
 	}
 }
 @media screen and (max-width: 590px) {
-	.b-shiki_editor aside.markers {
+	body[id="profiles_show"] .b-shiki_editor aside.markers {
 		height: 8px !important;
 	}
 	.p-profiles-show .cc-favourites .c-column {
